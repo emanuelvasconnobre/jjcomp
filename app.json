@@ -3,6 +3,8 @@
     "name": "jjcomp",
     "slug": "jjcomp",
     "version": "1.0.0",
+    "entryPoint": "./src/App.tsx",
+    "main": "src/App.tsx",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
