@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './style';
-import { View, Text, TextInput, Button } from 'react-native';
+import { Container, LoginContainer, Title, InputsContainer, Input, ButtonContainer} from './styled';
+import { Button } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 export default function Login(){
@@ -18,33 +18,17 @@ export default function Login(){
   }
 
   return(
-    <View style={styles.container}>
-      <View style={styles.loginContainer}>
-        <Text style={styles.title}>Liberação</Text>
-        <View style={styles.inputsContainer}>
-          <View style={styles.input}>
-            <Text>Nome</Text>
-            <TextInput
-              autoCapitalize={"characters"}
-              onChangeText={(text) => setUserName(text.toUpperCase())}
-            />
-          </View>
-          <View style={styles.input}>
-            <Text>Senha</Text>
-            <TextInput 
-              secureTextEntry={true}
-              onChangeText={text => setPassword(text)}
-            />
-          </View>
-        </View>
-        <View style={styles.buttonContainer}>
-          <Button
-            title="Entrar"
-            color="#5c90ff"
-            onPress={signIn}
-          />
-        </View>
-      </View>
-    </View>
+    <Container>
+      <LoginContainer>
+        <Title>Login</Title>
+        <InputsContainer>
+          <Input placeholder="Usuário" value={userName} onChangeText={setUserName} />
+          <Input placeholder="Senha" value={password} onChangeText={setPassword} secureTextEntry={true} />
+        </InputsContainer>
+        <ButtonContainer>
+          <Button title="Entrar" onPress={signIn} />
+        </ButtonContainer>
+      </LoginContainer>
+    </Container>
   );
 }
