@@ -23,7 +23,7 @@ export const Header = styled.View`
   margin-top: 35px;
 `;
 
-export const TopButtonsContainer = styled.View`
+export const ButtonsContainer = styled.View`
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -77,7 +77,7 @@ export const Space = styled.View<{ $size?: number; }>`
 
 export const InputsContainer = styled.View`
   margin-top: 20px;
-  width: 100%;
   display: flex;
   flex-direction: row;
+  margin-left: 13px;
 `;
