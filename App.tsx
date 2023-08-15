@@ -11,7 +11,7 @@ export default function App() {
     <>
       <NavigationContainer>
         <Stack.Navigator 
-          initialRouteName="preorder"
+          initialRouteName="login"
           screenOptions={{
             headerShown: false
           }}

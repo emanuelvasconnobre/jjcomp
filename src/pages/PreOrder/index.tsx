@@ -1,9 +1,8 @@
 import { Container, Header, Title, ButtonsContainer, Body, Text, 
   NumPreOrderContainer, LineColumn, TextInputContainer, LineRow,
   Space, InputsContainer } from './styled';
-import { ButtonCustom, DropdownCustom, InputCustom } from '../../components';
+import { ButtonCustom, DropdownCustom, InputCustom, Table } from '../../components';
 import { SafeAreaView, ScrollView } from 'react-native';
-import Table from '../../components/Table/Table';
 
 export default function PreOrder(){
   const services = [
