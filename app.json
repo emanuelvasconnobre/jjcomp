@@ -3,8 +3,8 @@
     "name": "jjcomp",
     "slug": "jjcomp",
     "version": "1.0.0",
-    "entryPoint": "./src/App.tsx",
-    "main": "src/App.tsx",
+    "entryPoint": "./App.tsx",
+    "main": "./App.tsx",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -26,7 +26,8 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
     }
   }
 }
