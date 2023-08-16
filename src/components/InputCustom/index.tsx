@@ -6,12 +6,6 @@ export default function InputCustom(props: any){
 
   let keyboardType = 'default';
 
-  let size = '100%';
-
-  if(props.size != null){
-    size = props.size;
-  }
-
   if(props.keyboardType === 'numeric'){
     keyboardType = 'numeric';
   }
@@ -34,14 +28,13 @@ export default function InputCustom(props: any){
   }
 
   return(
-    <Container>
+    <Container $size={props.size}>
       <Body>
         <Text>{props.label}</Text>
         <Input 
           keyboardType={keyboardType}
           placeholder={props.placeholder}
           onChangeText={setValue}
-          $size={size}
           value={mask !== null ? mask : value}
         />
       </Body>

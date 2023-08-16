@@ -1,7 +1,8 @@
 import React from 'react';
-import { Container, LoginContainer, Title, InputsContainer, Input, ButtonContainer} from './styled';
-import { Button } from 'react-native';
+import { BackHandler } from 'react-native';
+import { Container, LoginContainer, InputsContainer, SpaceH, SpaceW, ButtonContainer, Title} from './styled';
 import { useNavigation } from '@react-navigation/native';
+import { InputLogin, ButtonLogin } from '../../components';
 
 export default function Login(){
   const navigation = useNavigation();
@@ -17,16 +18,22 @@ export default function Login(){
     }
   }
 
+  function closeApp(){
+    BackHandler.exitApp();
+  }
+
   return(
     <Container>
       <LoginContainer>
-        <Title>Login</Title>
         <InputsContainer>
-          <Input placeholder="Usuário" value={userName} onChangeText={setUserName} />
-          <Input placeholder="Senha" value={password} onChangeText={setPassword} secureTextEntry={true} />
+          <InputLogin placeholder="Usuário" value={userName} onChangeText={setUserName} />
+          <SpaceH $size="20" />
+          <InputLogin placeholder="Senha" value={password} onChangeText={setPassword} secureTextEntry={true} />
         </InputsContainer>
         <ButtonContainer>
-          <Button title="Entrar" onPress={signIn} />
+          <ButtonLogin title="Acessar" onPress={signIn} />
+          <SpaceW $size="25" />
+          <ButtonLogin title="Sair" onPress={closeApp} /> 
         </ButtonContainer>
       </LoginContainer>
     </Container>
